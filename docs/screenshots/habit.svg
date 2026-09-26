@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="480" viewBox="0 0 240 480" role="img" aria-label="打卡 · 六条纪律清单">
+  <rect width="240" height="480" fill="#f5f5f5"/>
+  <rect x="14" y="14" width="212" height="452" rx="26" fill="#111111" stroke="#2a2a2a" stroke-width="1.5"/>
+  <rect x="96" y="26" width="48" height="7" rx="3.5" fill="#2a2a2a"/>
+  <text x="120" y="64" text-anchor="middle" font-family="-apple-system,Segoe UI,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#ffffff">今日习惯打卡</text>
+  <line x1="30" y1="76" x2="210" y2="76" stroke="#2a2a2a" stroke-width="1"/>
+    <rect x="30" y="92" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="105" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="104" width="120" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="117" width="86" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+  <rect x="30" y="142" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="155" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="154" width="98" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="167" width="72" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+  <rect x="30" y="192" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="205" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="204" width="76" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="217" width="58" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+  <rect x="30" y="242" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="255" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="254" width="120" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="267" width="44" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+  <rect x="30" y="292" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="305" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="304" width="98" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="317" width="86" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+  <rect x="30" y="342" width="180" height="40" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <rect x="42" y="355" width="14" height="14" rx="3" fill="#3ddc84" opacity="0.75"/>
+  <rect x="66" y="354" width="76" height="9" rx="4.5" fill="#2a2a2a"/>
+  <rect x="66" y="367" width="72" height="9" rx="4.5" fill="#2a2a2a" opacity="0.7"/>
+
+  <rect x="30" y="418" width="180" height="34" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="120" y="440" text-anchor="middle" font-family="-apple-system,Segoe UI,Microsoft YaHei,sans-serif" font-size="11" fill="#3ddc84">打卡 · 六条纪律清单</text>
+  <text x="120" y="472" text-anchor="middle" font-family="-apple-system,Segoe UI,Microsoft YaHei,sans-serif" font-size="9" fill="#8a8a8a">截图待补充</text>
+</svg>

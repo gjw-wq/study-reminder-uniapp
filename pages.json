@@ -1,0 +1,123 @@
+{
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationBarTitleText": "学习纪律官",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/habit/habit",
+            "style": {
+                "navigationBarTitleText": "今日习惯打卡",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/habit-history/habit-history",
+            "style": {
+                "navigationBarTitleText": "打卡记录",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/course/course",
+            "style": {
+                "navigationBarTitleText": "课程表",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/course-editor/course-editor",
+            "style": {
+                "navigationBarTitleText": "编辑课程表",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/review/review",
+            "style": {
+                "navigationBarTitleText": "每日学习复盘",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/review-history/review-history",
+            "style": {
+                "navigationBarTitleText": "复盘历史",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/settings/settings",
+            "style": {
+                "navigationBarTitleText": "设置",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        },
+        {
+            "path": "pages/data-manager/data-manager",
+            "style": {
+                "navigationBarTitleText": "数据管理中心",
+                "navigationBarBackgroundColor": "#111111",
+                "navigationBarTextStyle": "white",
+                "backgroundColor": "#0a0a0a"
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "学习纪律官",
+        "navigationBarBackgroundColor": "#111111",
+        "backgroundColor": "#0a0a0a"
+    },
+    "tabBar": {
+        "color": "#555555",
+        "selectedColor": "#3ddc84",
+        "backgroundColor": "#111111",
+        "borderStyle": "black",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "static/tab-home.png",
+                "selectedIconPath": "static/tab-home-active.png"
+            },
+            {
+                "pagePath": "pages/habit/habit",
+                "text": "打卡",
+                "iconPath": "static/tab-habit.png",
+                "selectedIconPath": "static/tab-habit-active.png"
+            },
+            {
+                "pagePath": "pages/course/course",
+                "text": "课表",
+                "iconPath": "static/tab-course.png",
+                "selectedIconPath": "static/tab-course-active.png"
+            },
+            {
+                "pagePath": "pages/settings/settings",
+                "text": "设置",
+                "iconPath": "static/tab-settings.png",
+                "selectedIconPath": "static/tab-settings-active.png"
+            }
+        ]
+    }
+}

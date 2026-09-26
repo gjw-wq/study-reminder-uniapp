@@ -1,0 +1,21 @@
+# 构建产物与打包输出
+/unpackage/
+/dist/
+*.apk
+*.ipa
+*.zip
+
+# 本地调试与运行时
+node_modules/
+.hbuilderx/
+uni_modules/
+
+# 敏感/本地数据
+/.workbuddy/
+/common/courses-real.js.bak
+/data/*.db
+*.log
+
+# OS 文件
+.DS_Store
+Thumbs.db

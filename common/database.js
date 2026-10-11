@@ -335,6 +335,7 @@ class Database {
             }))
         }
         _saveCourses(arr)
+        _setUserImportedFlag(true)
     }
 
     async clearCourses() {
@@ -523,6 +524,7 @@ class Database {
                 summary.courses++
             }
             _saveCourses(arr)
+            _setUserImportedFlag(true)
         }
 
         // 习惯打卡
@@ -616,6 +618,18 @@ function getTodayStr() {
 // ==================== 课程数据 storage 层 ====================
 // 走 uni.setStorageSync / getStorageSync，彻底绕开 plus.sqlite 的 API 兼容坑
 const COURSES_STORAGE_KEY = 'courses_data'
+// 用户已导入自有课程数据的标记：一旦置位，启动时的自动初始化/版本重建绝不再覆盖
+const COURSES_USER_IMPORTED_KEY = 'courses_user_imported'
+
+export { COURSES_USER_IMPORTED_KEY }
+
+function _setUserImportedFlag(v) {
+    try {
+        uni.setStorageSync(COURSES_USER_IMPORTED_KEY, v ? 1 : 0)
+    } catch (e) {
+        console.error('setUserImportedFlag failed:', e)
+    }
+}
 
 function _loadCourses() {
     try {

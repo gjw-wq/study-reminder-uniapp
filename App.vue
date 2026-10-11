@@ -13,23 +13,7 @@ export default {
         try {
             // 初始化数据库（创建表结构）
             await initDatabase()
-            // 清空旧课程再重新初始化（避免手机上残留过期的6-7月数据）
-            try {
-                // 如果表中全是今天之前的旧数据，则清空重新初始化
-                const allCourses = await db.getAllCourses()
-                const todayStr = (() => {
-                    const n = new Date();
-                    return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,'0')}-${String(n.getDate()).padStart(2,'0')}`
-                })()
-                const hasRecent = allCourses && allCourses.some(c => c.date >= todayStr)
-                if (!hasRecent) {
-                    console.log('No recent courses found, clearing old data and re-initializing')
-                    await db.clearCourses()
-                }
-            } catch (e) {
-                console.log('Clear old courses skipped:', e.message)
-            }
-            // 导入默认课程数据（仅在首次启动时，await 确保顺序执行）
+            // 导入默认课程数据（仅首次/版本升级且用户未导入自有数据时，await 确保顺序执行）
             try {
                 await initCourseData(db)
             } catch (e) {

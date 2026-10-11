@@ -303,7 +303,8 @@ main.startActivityForResult(intent, REQ)
 | 旧包跑旧代码 | 改完必须重新云打包 |
 | `ColorTranslator.FromHtml` API 写错 | 用 `Color.FromArgb(r,g,b)` 传数值 RGB |
 | .db 文件不含 storage 数据 | JSON 统一备份恢复，.db 仅辅助 |
-| 版本升级数据不迁移 | 版本号机制（`xxx_data_version`）触发自动重建 |
+| 版本升级触发自动重建会覆盖用户导入数据 | `common/course-data.js` 的 `initCourseData` 与 `App.vue` 的 `onLaunch` 在每次启动都会跑：无「今天/未来」课程就 `clearCourses()`、版本号不符就重写默认课表。CSV/JSON 导入的课程若日期都在过去，重启即被清空还原成默认课表 |
+| 用户导入数据持久化保护 | 导入（`batchInsertCourses`/`importAllData` 课程分支）写入后打 `courses_user_imported=1` 标记；`initCourseData` 顶部一旦检测到该标记立即 return，绝不覆盖；`App.vue` 已移除危险的 `hasRecent→clearCourses()` 逻辑。清空课程（`clearCourses`/`clearTable`）不重置该标记，避免误复活默认课表 |
 | `textarea` 不设 maxlength 默认 140 字截断 | 显式写 `maxlength="-1"`；导入框用 `:value` + `@input` 手动同步 |
 | App 端 `uni.chooseFile` 选不了 JSON | Android 用 Native.js `ACTION_GET_CONTENT`，或 plus.io 扫描目录自建列表 |
 | `<text>` 内嵌 `<template v-if>` | uni-app 编译不稳，改 computed 返回拼接字符串 |

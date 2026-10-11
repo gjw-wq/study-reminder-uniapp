@@ -4,6 +4,7 @@
  * 真实课程数据来源：1.sql（由 _parse_courses.py 解析生成 courses-real.json/js）
  */
 import { REAL_COURSE_SCHEDULE } from './courses-real.js'
+import { COURSES_USER_IMPORTED_KEY } from './database.js'
 
 export const COURSE_SCHEDULE = REAL_COURSE_SCHEDULE
 
@@ -56,6 +57,13 @@ export async function initCourseData(db) {
      */
     const storedVersion = uni.getStorageSync(COURSES_VERSION_KEY)
     let needRewrite = false
+
+    // 关键保护：若用户已导入自有课程数据，绝不覆盖，确保导入数据持久化
+    if (uni.getStorageSync(COURSES_USER_IMPORTED_KEY)) {
+        console.log('[course-data] 检测到用户已导入课程数据，跳过自动初始化，保留用户数据')
+        return
+    }
+
 
     if (storedVersion !== COURSE_DATA_VERSION) {
         // 版本不匹配（全新安装 storedVersion='' / 旧版本升级）→ 清空重写
